@@ -62,20 +62,20 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in delay-700">
           <button 
             onClick={() => scrollToSection('contact')}
-            className="group bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            className="group bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
           >
             <span className="group-hover:tracking-wider transition-all duration-300">Start Your Journey</span>
           </button>
           <button 
             onClick={() => scrollToSection('beliefs')}
-            className="group border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+            className="group border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
           >
             <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
             <span className="group-hover:tracking-wider transition-all duration-300">Discover Our Beliefs</span>
           </button>
         </div>
 
-        <div className="mt-16 animate-fade-in delay-1000">
+        <div className="mt-20 animate-fade-in delay-1000">
           <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
             <div className="group cursor-pointer">
               <div className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">200+</div>

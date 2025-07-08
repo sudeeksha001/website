@@ -155,33 +155,34 @@ const CoreBeliefs = () => {
         </div>
 
         {/* Beliefs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {coreBeliefs.map((belief, index) => (
-            <div
+            <Link
+              to={`/beliefs/${belief.title.toLowerCase().replace(/\s+/g, '-')}`}
               key={belief.id}
               className={`group cursor-pointer transition-all duration-300 ${
                 index === currentIndex ? 'ring-2 ring-white' : ''
               }`}
               onClick={() => setCurrentIndex(index)}
             >
-              <div className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 hover:bg-gray-700/50 transition-all duration-300 text-center">
+              <div className="bg-gray-800/50 border border-gray-700 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 text-center h-full flex flex-col justify-between">
                 <div className="text-white mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {belief.icon}
                 </div>
                 
-                <div className="text-sm uppercase tracking-wider text-gray-400 mb-3">
+                <div className="text-xs uppercase tracking-wider text-gray-400 mb-3">
                   {belief.category}
                 </div>
                 
-                <h4 className="text-xl font-bold text-white mb-4 group-hover:text-gray-300 transition-colors duration-300">
+                <h4 className="text-lg font-bold text-white mb-4 group-hover:text-gray-300 transition-colors duration-300">
                   {belief.title}
                 </h4>
                 
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-400 text-xs leading-relaxed">
                   {belief.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
