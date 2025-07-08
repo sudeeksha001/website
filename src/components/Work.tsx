@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Target, Heart, Zap, Users, TrendingUp, Award } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Target, Heart, Zap, Users, TrendingUp, Award, ArrowRight } from 'lucide-react';
 
 const coreBeliefs = [
   {

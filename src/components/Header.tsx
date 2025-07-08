@@ -47,7 +47,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/WhatsApp Image 2025-07-06 at 08.14.10.jpeg" 
+              src="/logo.png" 
               alt="Underdog Logo" 
               className="w-12 h-12 object-contain"
             />

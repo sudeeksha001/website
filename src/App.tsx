@@ -25,6 +25,13 @@ import AboutPage from './pages/AboutPage';
 import PricingPage from './pages/PricingPage';
 import ResourcesPage from './pages/ResourcesPage';
 
+// Core Beliefs Pages
+import EveryBusinessDeservesToWinPage from './pages/EveryBusinessDeservesToWinPage';
+import AuthenticityOverEverythingPage from './pages/AuthenticityOverEverythingPage';
+import InnovationDrivesGrowthPage from './pages/InnovationDrivesGrowthPage';
+import CommunityOverCompetitionPage from './pages/CommunityOverCompetitionPage';
+import ResultsSpeakLouderPage from './pages/ResultsSpeakLouderPage';
+
 function HomePage() {
   return (
     <>
@@ -57,6 +64,11 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
+          <Route path="/beliefs/every-business-deserves-to-win" element={<EveryBusinessDeservesToWinPage />} />
+          <Route path="/beliefs/authenticity-over-everything" element={<AuthenticityOverEverythingPage />} />
+          <Route path="/beliefs/innovation-drives-growth" element={<InnovationDrivesGrowthPage />} />
+          <Route path="/beliefs/community-over-competition" element={<CommunityOverCompetitionPage />} />
+          <Route path="/beliefs/results-speak-louder" element={<ResultsSpeakLouderPage />} />
         </Routes>
         <Footer />
       </div>

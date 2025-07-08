@@ -238,7 +238,7 @@ const AboutPage = () => {
             </blockquote>
             <div className="flex items-center justify-center space-x-4">
               <img 
-                src="/WhatsApp Image 2025-07-06 at 08.14.10.jpeg" 
+                src="/logo.png" 
                 alt="Underdog Logo" 
                 className="w-12 h-12 object-contain"
               />
