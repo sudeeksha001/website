@@ -67,11 +67,11 @@ const Hero = () => {
             <span className="group-hover:tracking-wider transition-all duration-300">Start Your Journey</span>
           </button>
           <button 
-            onClick={() => scrollToSection('work')}
+            onClick={() => scrollToSection('beliefs')}
             className="group border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
           >
             <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-            <span className="group-hover:tracking-wider transition-all duration-300">View Our Work</span>
+            <span className="group-hover:tracking-wider transition-all duration-300">Discover Our Beliefs</span>
           </button>
         </div>
 

@@ -56,10 +56,10 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-300">
               <li>
                 <button 
-                  onClick={() => scrollToSection('work')}
+                  onClick={() => scrollToSection('beliefs')}
                   className="hover:text-white transition-colors duration-300 text-left"
                 >
-                  Our Work
+                  Our Beliefs
                 </button>
               </li>
               <li>

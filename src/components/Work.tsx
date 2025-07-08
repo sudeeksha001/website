@@ -1,151 +1,140 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, ExternalLink, TrendingUp } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Target, Heart, Zap, Users, TrendingUp, Award } from 'lucide-react';
 
-const workItems = [
+const coreBeliefs = [
   {
     id: 1,
-    title: "Bloom Boutique Transformation",
-    category: "Retail Marketing",
-    description: "Transformed a struggling boutique into the neighborhood's most popular destination",
-    image: "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=800",
-    results: "400% increase in foot traffic",
-    metrics: {
-      before: "12 customers/day",
-      after: "48 customers/day",
-      timeframe: "6 months"
-    }
+    title: "Every Business Deserves to Win",
+    category: "Our Foundation",
+    description: "We believe that with the right strategy and execution, any business can become a market leader",
+    icon: <Target className="w-12 h-12" />,
+    principle: "No business is too small to achieve greatness. Every entrepreneur deserves access to world-class marketing strategies.",
+    values: [
+      "Equal opportunity for success",
+      "Tailored strategies for every budget",
+      "Proven methodologies for all industries"
+    ]
   },
   {
     id: 2,
-    title: "TechGear Pro E-commerce Empire",
-    category: "E-commerce",
-    description: "Built a multi-million dollar online business from zero to market leader",
-    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    results: "15K monthly orders in 18 months",
-    metrics: {
-      before: "0 orders/month",
-      after: "15K orders/month",
-      timeframe: "18 months"
-    }
+    title: "Authenticity Over Everything",
+    category: "Our Philosophy",
+    description: "Real brands connect with real people through genuine stories and authentic experiences",
+    icon: <Heart className="w-12 h-12" />,
+    principle: "In a world of fake promises and overnight success stories, we believe in building genuine relationships and delivering real results.",
+    values: [
+      "Transparent communication",
+      "Honest expectations setting",
+      "Authentic brand storytelling"
+    ]
   },
   {
     id: 3,
-    title: "Premium Properties Sales Acceleration",
-    category: "Real Estate",
-    description: "Revolutionized property marketing to sell luxury homes 75% faster",
-    image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
-    results: "75% faster sales",
-    metrics: {
-      before: "120 days average",
-      after: "30 days average",
-      timeframe: "12 months"
-    }
+    title: "Innovation Drives Growth",
+    category: "Our Approach",
+    description: "We stay ahead of trends and constantly evolve our strategies to keep you competitive",
+    icon: <Zap className="w-12 h-12" />,
+    principle: "The marketing landscape changes daily. We embrace innovation and adapt quickly to ensure our clients always stay ahead of the curve.",
+    values: [
+      "Cutting-edge strategies",
+      "Early trend adoption",
+      "Continuous learning and improvement"
+    ]
   },
   {
     id: 4,
-    title: "Urban Eats Restaurant Revival",
-    category: "Restaurant Marketing",
-    description: "Turned an empty restaurant into the most booked spot in town",
-    image: "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=800",
-    results: "Fully booked every night",
-    metrics: {
-      before: "30% capacity",
-      after: "100% capacity",
-      timeframe: "8 months"
-    }
+    title: "Community Over Competition",
+    category: "Our Culture",
+    description: "We build communities, not just customer bases. Together, we all grow stronger",
+    icon: <Users className="w-12 h-12" />,
+    principle: "Success is sweeter when shared. We believe in lifting each other up and creating ecosystems where everyone thrives.",
+    values: [
+      "Collaborative partnerships",
+      "Knowledge sharing",
+      "Mutual growth mindset"
+    ]
   },
   {
     id: 5,
-    title: "FitLife Studio Membership Explosion",
-    category: "Fitness Marketing",
-    description: "Grew a small fitness studio into the area's premier fitness destination",
-    image: "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=800",
-    results: "10x membership growth",
-    metrics: {
-      before: "50 members",
-      after: "500 members",
-      timeframe: "10 months"
-    }
+    title: "Results Speak Louder Than Words",
+    category: "Our Promise",
+    description: "Every strategy we implement is designed to deliver measurable, tangible results",
+    icon: <TrendingUp className="w-12 h-12" />,
+    principle: "We don't just create pretty campaigns. Every dollar spent, every hour invested must contribute to your bottom line and business growth.",
+    values: [
+      "Data-driven decisions",
+      "Measurable outcomes",
+      "ROI-focused strategies"
+    ]
   }
 ];
 
-const Work = () => {
+const CoreBeliefs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % workItems.length);
+    setCurrentIndex((prev) => (prev + 1) % coreBeliefs.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + workItems.length) % workItems.length);
+    setCurrentIndex((prev) => (prev - 1 + coreBeliefs.length) % coreBeliefs.length);
   };
 
-  const currentWork = workItems[currentIndex];
+  const currentBelief = coreBeliefs[currentIndex];
 
   return (
-    <section id="work" className="py-24 bg-gradient-to-br from-black via-gray-900 to-gray-800">
+    <section id="beliefs" className="py-24 bg-gradient-to-br from-black via-gray-900 to-gray-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
-            OUR WORK
+            OUR CORE BELIEFS
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Real transformations. Real results. See how we've helped businesses across industries achieve extraordinary growth.
+            The fundamental principles that guide everything we do and every decision we make for our clients.
           </p>
         </div>
 
-        {/* Featured Case Study */}
+        {/* Featured Belief */}
         <div className="relative mb-16">
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-3xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative">
-                <img
-                  src={currentWork.image}
-                  alt={currentWork.title}
-                  className="w-full h-96 lg:h-full object-cover"
-                />
-                <div className="absolute top-6 left-6">
-                  <span className="bg-black/70 text-white px-4 py-2 rounded-full text-sm font-medium">
-                    {currentWork.category}
-                  </span>
+              <div className="relative bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center p-12">
+                <div className="text-center">
+                  <div className="text-white mb-6 flex justify-center">
+                    {currentBelief.icon}
+                  </div>
+                  <div className="text-sm uppercase tracking-wider text-gray-400 mb-4">
+                    {currentBelief.category}
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    {currentBelief.title}
+                  </h3>
                 </div>
               </div>
               
               <div className="p-12 flex flex-col justify-center">
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  {currentWork.title}
-                </h3>
-                
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  {currentWork.description}
+                  {currentBelief.description}
                 </p>
                 
                 <div className="bg-gray-700/50 rounded-2xl p-6 mb-8">
-                  <div className="flex items-center mb-4">
-                    <TrendingUp className="w-6 h-6 text-green-400 mr-3" />
-                    <span className="text-2xl font-bold text-white">{currentWork.results}</span>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-gray-400 text-sm mb-1">Before</div>
-                      <div className="text-white font-semibold">{currentWork.metrics.before}</div>
-                    </div>
-                    <div>
-                      <div className="text-gray-400 text-sm mb-1">After</div>
-                      <div className="text-white font-semibold">{currentWork.metrics.after}</div>
-                    </div>
-                    <div>
-                      <div className="text-gray-400 text-sm mb-1">Timeframe</div>
-                      <div className="text-white font-semibold">{currentWork.metrics.timeframe}</div>
-                    </div>
-                  </div>
+                  <h4 className="text-lg font-bold text-white mb-4">Our Principle</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    {currentBelief.principle}
+                  </p>
                 </div>
                 
-                <button className="inline-flex items-center text-white hover:text-gray-300 transition-colors duration-300">
-                  <span className="font-medium">View Full Case Study</span>
-                  <ExternalLink className="w-5 h-5 ml-2" />
-                </button>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-4">How We Live This</h4>
+                  <ul className="space-y-3">
+                    {currentBelief.values.map((value, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <Award className="w-5 h-5 text-white mr-3" />
+                        {value}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -165,44 +154,63 @@ const Work = () => {
           </button>
         </div>
 
-        {/* Work Grid */}
+        {/* Beliefs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {workItems.map((work, index) => (
+          {coreBeliefs.map((belief, index) => (
             <div
-              key={work.id}
+              key={belief.id}
               className={`group cursor-pointer transition-all duration-300 ${
                 index === currentIndex ? 'ring-2 ring-white' : ''
               }`}
               onClick={() => setCurrentIndex(index)}
             >
-              <div className="bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:bg-gray-700/50 transition-all duration-300">
-                <div className="relative">
-                  <img
-                    src={work.image}
-                    alt={work.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                      {work.category}
-                    </span>
-                  </div>
+              <div className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 hover:bg-gray-700/50 transition-all duration-300 text-center">
+                <div className="text-white mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                  {belief.icon}
                 </div>
                 
-                <div className="p-6">
-                  <h4 className="text-lg font-bold text-white mb-2 group-hover:text-gray-300 transition-colors duration-300">
-                    {work.title}
-                  </h4>
-                  <p className="text-gray-400 text-sm mb-4">{work.description}</p>
-                  <div className="text-white font-semibold text-sm">{work.results}</div>
+                <div className="text-sm uppercase tracking-wider text-gray-400 mb-3">
+                  {belief.category}
                 </div>
+                
+                <h4 className="text-xl font-bold text-white mb-4 group-hover:text-gray-300 transition-colors duration-300">
+                  {belief.title}
+                </h4>
+                
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {belief.description}
+                </p>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-20 text-center">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 border border-gray-700 rounded-3xl p-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Experience These Values?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              These aren't just words on a page. They're the foundation of how we work with every client, 
+              every day. Experience the Underdog difference.
+            </p>
+            <button
+              onClick={() => {
+                const element = document.getElementById('contact');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Your Journey
+            </button>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Work;
+export default CoreBeliefs;

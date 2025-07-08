@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import Work from './components/Work';
+import CoreBeliefs from './components/Work';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Newsletter from './components/Newsletter';
@@ -30,7 +30,7 @@ function HomePage() {
     <>
       <Hero />
       <Services />
-      <Work />
+      <CoreBeliefs />
       <Testimonials />
       <About />
       <Newsletter />

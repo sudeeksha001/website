@@ -56,10 +56,10 @@ const Header = () => {
 
           <nav className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection('work')}
+              onClick={() => scrollToSection('beliefs')}
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm font-medium tracking-wide uppercase"
             >
-              Work
+              Our Beliefs
             </button>
             
             <div 
@@ -144,10 +144,10 @@ const Header = () => {
       } overflow-hidden bg-black/95 backdrop-blur-lg`}>
         <nav className="px-6 py-4 space-y-4">
           <button
-            onClick={() => scrollToSection('work')}
+            onClick={() => scrollToSection('beliefs')}
             className="block w-full text-left text-white/80 hover:text-white transition-colors duration-300 text-sm font-medium tracking-wide uppercase py-2"
           >
-            Work
+            Our Beliefs
           </button>
           
           <div className="space-y-2">
