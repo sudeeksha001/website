@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -49,28 +50,34 @@ function HomePage() {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen">
+      <div className="min-h-screen flex flex-col">
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services/retail-marketing" element={<RetailMarketingPage />} />
-          <Route path="/services/ecommerce" element={<EcommercePage />} />
-          <Route path="/services/real-estate" element={<RealEstateMarketingPage />} />
-          <Route path="/services/brand-development" element={<BrandDevelopmentPage />} />
-          <Route path="/services/digital-advertising" element={<DigitalAdvertisingPage />} />
-          <Route path="/services/social-media" element={<SocialMediaPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/resources" element={<ResourcesPage />} />
-          <Route path="/beliefs/every-business-deserves-to-win" element={<EveryBusinessDeservesToWinPage />} />
-          <Route path="/beliefs/authenticity-over-everything" element={<AuthenticityOverEverythingPage />} />
-          <Route path="/beliefs/innovation-drives-growth" element={<InnovationDrivesGrowthPage />} />
-          <Route path="/beliefs/community-over-competition" element={<CommunityOverCompetitionPage />} />
-          <Route path="/beliefs/results-speak-louder" element={<ResultsSpeakLouderPage />} />
-          <Route path="/beliefs/results-speak-louder" element={<ResultsSpeakLouderPage />} />
-        </Routes>
+        <div className="flex-grow">
+          <Routes>
+            {/* Main Pages */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/resources" element={<ResourcesPage />} />
+
+            {/* Services Pages */}
+            <Route path="/services/retail-marketing" element={<RetailMarketingPage />} />
+            <Route path="/services/ecommerce" element={<EcommercePage />} />
+            <Route path="/services/real-estate" element={<RealEstateMarketingPage />} />
+            <Route path="/services/brand-development" element={<BrandDevelopmentPage />} />
+            <Route path="/services/digital-advertising" element={<DigitalAdvertisingPage />} />
+            <Route path="/services/social-media" element={<SocialMediaPage />} />
+
+            {/* Belief Pages */}
+            <Route path="/beliefs/every-business-deserves-to-win" element={<EveryBusinessDeservesToWinPage />} />
+            <Route path="/beliefs/authenticity-over-everything" element={<AuthenticityOverEverythingPage />} />
+            <Route path="/beliefs/innovation-drives-growth" element={<InnovationDrivesGrowthPage />} />
+            <Route path="/beliefs/community-over-competition" element={<CommunityOverCompetitionPage />} />
+            <Route path="/beliefs/results-speak-louder" element={<ResultsSpeakLouderPage />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>
